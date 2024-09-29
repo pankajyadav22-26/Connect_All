@@ -1,0 +1,205 @@
+.ls {
+    background: #001030;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: slideInLeft 0.5s ease-in-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.ls-top {
+    padding: 20px;
+}
+
+.ls-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ls-nav .logo {
+    max-width: 140px;
+}
+
+.ls-nav .menu img {
+    max-height: 20px;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.ls-nav .menu img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.ls-search {
+    background-color: #002670;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ls-search img {
+    width: 16px;
+}
+
+.ls-search input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 11px;
+    flex: 1;
+}
+
+.ls-search input::placeholder {
+    color: #c8c8c8;
+}
+
+.ls-list {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    overflow-y: scroll;
+    margin-top: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: #077eff #001030;
+}
+
+.ls-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.ls-list::-webkit-scrollbar-thumb {
+    background-color: #077eff;
+    border-radius: 10px;
+}
+
+.friends {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.friends img {
+    width: 35px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    transition: border 0.3s ease, transform 0.3s ease;
+}
+
+.friends div {
+    display: flex;
+    flex-direction: column;
+}
+
+.friends span {
+    color: #9f9f9f;
+    font-size: 11px;
+    transition: color 0.3s ease;
+}
+
+.friends:hover {
+    background-color: #077eff;
+    transform: translateX(5px);
+}
+
+.friends:hover img {
+    transform: scale(1.1);
+}
+
+.friends:hover span {
+    color: white;
+}
+
+.ls-nav .menu {
+    position: relative;
+    padding: 10px 0px;
+}
+
+.menu .sub-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 130px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    display: none;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeInSubMenu 0.3s ease;
+}
+
+@keyframes fadeInSubMenu {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sub-menu hr {
+    border: none;
+    height: 1px;
+    background: #a4a4a4;
+    margin: 8px 0px;
+}
+
+.sub-menu p {
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.sub-menu p:hover {
+    color: #077eff;
+}
+
+.menu:hover .sub-menu {
+    display: block;
+}
+
+.friends.border img {
+    border: 3px solid #07fff3;
+    transform: scale(1.2);
+}
+
+.friends.border div span {
+    color: #07fff3;
+}
+
+@media (max-width: 900px) {
+    .ls {
+        width: 100%;
+        height: auto;
+        padding: 10px 5px;
+    }
+}

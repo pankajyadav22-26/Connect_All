@@ -1,0 +1,140 @@
+.rs {
+    color: white;
+    background: #001030;
+    position: relative;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeInRight 0.5s ease-in-out;
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.rs-profile {
+    padding-top: 60px;
+    text-align: center;
+    max-width: 70%;
+    margin: auto;
+    animation: bounceIn 1s ease-in-out;
+}
+
+@keyframes bounceIn {
+
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.rs-profile img {
+    width: 110px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.rs-profile img:hover {
+    transform: scale(1.1);
+}
+
+.rs-profile h3 {
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 5px 0px;
+    color: #77aaff;
+}
+
+.rs-profile p {
+    font-size: 10px;
+    opacity: 80%;
+    font-weight: 300;
+    color: #cccccc;
+}
+
+.rs hr {
+    border-color: #ffffff50;
+    margin: 15px 0px;
+}
+
+.rs-media {
+    padding: 0px 20px;
+    font-size: 13px;
+}
+
+.rs-media div {
+    max-height: 180px;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    margin-top: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: #077eff #001030;
+}
+
+.rs-media div::-webkit-scrollbar {
+    width: 8px;
+}
+
+.rs-media div::-webkit-scrollbar-thumb {
+    background-color: #077eff;
+    border-radius: 10px;
+}
+
+.rs-media div img {
+    width: 60px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rs-media div img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.rs button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #077eff;
+    color: white;
+    border: none;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 10px 65px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .rs {
+        display: none;
+    }
+}
